@@ -22,4 +22,10 @@ public class TestController {
 	public String massage() {
 		return "Hello this is Controller......!";
 	}
+	
+	@GetMapping("/sayHi")
+	public ResponseEntity<String> sayHi(){
+		String msg = "Hello ..........";
+		return new ResponseEntity<>(msg,HttpStatus.OK);
+	}
 }
